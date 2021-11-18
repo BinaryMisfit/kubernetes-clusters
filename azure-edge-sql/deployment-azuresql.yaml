@@ -22,7 +22,8 @@ spec:
             claimName: pvc-sqlmaster
       containers:
         - name: azuresql
-          image: binarymisfit/azure-edge:latest
+          image: mcr.microsoft.com/azure-sql-edge:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 1433
               name: sql-server-port
