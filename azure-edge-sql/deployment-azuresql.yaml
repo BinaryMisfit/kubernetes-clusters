@@ -40,7 +40,3 @@ spec:
                 secretKeyRef:
                   name: sql-sa-password
                   key: MSSQL_SA_PASSWORD
-      #          command: [ "/bin/bash", "-c", "--" ]
-      #          args: [ "while true; do sleep 30; done;" ]
-      imagePullSecrets:
-        - name: binaryhub

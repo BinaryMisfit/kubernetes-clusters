@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mobilepos
+  labels:
+    app: mobilepos
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mobilepos
+  template:
+    metadata:
+      labels:
+        app: mobilepos
+    spec:
+      containers:
+        - name: mobilepos
+          image: mcr.microsoft.com/dotnet/framework/wcf:4.8
+          imagePullPolicy: Always
